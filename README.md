@@ -5,4 +5,4 @@
  Create a new web application in IIS with name "CalculatePremium" with a "port no" not already in use example 888
  Point the web application to the folder  C:\CalculatePremium
  Use Chrome/IE to browse to the application at http://servername:888
- Fill in the filed values , check the validations and calculation are firing on Occupation change and also on Calculate button click.  
+ Fill in the field values , check the validations and calculation are firing on Occupation change and also on Calculate button click.  
