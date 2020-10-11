@@ -19,8 +19,59 @@
                     Name is required.
                 </span>
             </div>
+            <div class="form-group">
+                <label for="Age">Age</label>
+                <input name="Age"
+                       type="number"
+                       class="form-control"
+                       placeholder="Enter Age"
+                       ng-required="true"
+                       ng-model="Premium.Age">
+                <span style="color:red" ng-show="formCalculate.Age.$error.required && calculated">
+                    Age is required.
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="Release">Date of Birth</label>
+                <p class="input-group">
+                    <input type="text"
+                           name="DateOfBirth"
+                           class="form-control"
+                           ng-model="Premium.DateOfBirth"
+                           ng-required="true"
+                           is-open="opened" />
+                </p>
+                <span style="color:red" ng-show="formCalculate.DateOfBirth.$error.required && calculated">
+                    Date Of Birth is required.
+                </span>
+
+            </div>
+            <div class="form-group">
+                <label for="Occupation">Occupation</label>
+                <select name="Occupation" ng-model="Premium.Occupation" class="form-control" ng-required="true" ng-change="Calculate(Premium)">
+                    <option value="">--Select User--</option>
+                    <option ng-repeat="option in arrlist" value="{{option.rating}}">{{option.occupation}}</option>
+                </select>
+                <span style="color:red" ng-show="formCalculate.Occupation.$error.required && calculated">
+                    Occupation is required.
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="DeathSumInsured">Death Sum Insured</label>
+                <input name="DeathSumInsured"
+                       type="number"
+                       class="form-control"
+                       placeholder="Enter Death Sum Insured"
+                       ng-model="Premium.DeathSumInsured"
+                       ng-required="true">
+                <span style="color:red" ng-show="formCalculate.DeathSumInsured.$error.required && calculated">
+                    Death Sum Insured is required.
+                </span>
+            </div>
             <a href="/" class="btn btn-default">Cancel</a>
             <input id="butt" type="submit" class="btn btn-primary" value="Calculate" />
         </form>
+        <br />
+        <label>Death Premium:</label> {{calculation}}
     </div>
 </div>
