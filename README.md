@@ -1,5 +1,9 @@
 # TALPremiumTest
  Tarun TAL Premium Test 
+ 
+# Technologies Used
+The application has been built using ASP.Net MVC and Angular JS
+
 # Running the Project
  Downlod and Copy the files to a Folder called C:\CalculatePremium
  Create a new web application in IIS with name "CalculatePremium" with a "port no" not already in use example 888
