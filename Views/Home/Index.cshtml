@@ -3,3 +3,24 @@
 }
 
 <h1>Calculate Premium</h1>
+
+<div class="row" ng-controller="HomeController">
+    <div class="col-md-5">
+        <form novalidate name="formCalculate" ng-submit="Calculate(Premium)">
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input name="Name"
+                       type="text"
+                       class="form-control"
+                       placeholder="Enter Name"
+                       ng-model="Premium.Name"
+                       ng-required="true" />
+                <span style="color:red" ng-show="formCalculate.Name.$error.required && calculated">
+                    Name is required.
+                </span>
+            </div>
+            <a href="/" class="btn btn-default">Cancel</a>
+            <input id="butt" type="submit" class="btn btn-primary" value="Calculate" />
+        </form>
+    </div>
+</div>
