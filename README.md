@@ -1,6 +1,9 @@
 # TALPremiumTest
  Tarun TAL Premium Test 
- 
+
+#Assumptions
+Only required Validation has been added to the fields as mentioned in the requirements. More Validations on the fields can be easily added.
+
 # Technologies Used
 The application has been built using ASP.Net MVC and Angular JS.
 
