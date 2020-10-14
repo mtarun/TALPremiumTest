@@ -2,15 +2,12 @@
 
 angular.module("PremiumApp", [])
     .controller("HomeController", function ($scope) {
+
         $scope.calculated = false;
         $scope.Calculate = function (premium) {
             $scope.calculated = true;
 
-            $scope.$watch('formCalculate.$valid', function (newValue) {
-                $scope.isFormValid = newValue;
-            });
-
-            if ($scope.isFormValid) {
+            if ($scope.formCalculate.$valid) {
                 $scope.changedValue(premium);
             }
         }
@@ -40,10 +37,8 @@ angular.module("PremiumApp", [])
 
         // Function to do the Calculation 
         $scope.changedValue = function (item) {
-            if ($scope.isFormValid) {
                 //Set the Premium Value
                 $scope.calculation = (item.DeathSumInsured * occupationRating[item.Occupation] * item.Age) / (1000 * 12);
-            }
         }
     });
 

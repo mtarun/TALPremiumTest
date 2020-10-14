@@ -50,7 +50,7 @@
             <div class="form-group">
                 <label for="Occupation">Occupation</label>
                 <select name="Occupation" ng-model="Premium.Occupation" class="form-control" ng-required="true" ng-change="Calculate(Premium)">
-                    <option value="">--Select User--</option>
+                    <option value="">--Select Occupation--</option>
                     <option ng-repeat="option in arrlist" value="{{option.rating}}">{{option.occupation}}</option>
                 </select>
                 <span style="color:red" ng-show="formCalculate.Occupation.$error.required && calculated">
