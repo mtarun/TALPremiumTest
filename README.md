@@ -3,6 +3,7 @@
 
 #Assumptions
 Only required Validation has been added to the fields as mentioned in the requirements. More Validations on the fields can be easily added.
+Death Premium = (Death Cover amount * Occupation Rating Factor * Age) / (1000 * 12) formula has been used. 
 
 # Technologies Used
 The application has been built using ASP.Net MVC and Angular JS.
